@@ -1,0 +1,7 @@
+<h1>Details du restau</h1>
+<% @restaurant.reviews.each do |restaurant| %>
+  <h2><%= restaurant.content %></h2>
+  <p><%= restaurant.rating %></p>
+<% end %>
+
+<%= link_to "Add a comment", new_restaurant_review_path(@restaurant), class: "btn btn-primary"%>
